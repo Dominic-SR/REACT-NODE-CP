@@ -76,6 +76,7 @@ body {
   display: flex;
   text-decoration: none;
   color: var(--white);
+  transition: 1s;
 }
 
 .navigation ul li:hover a,
@@ -118,6 +119,7 @@ body {
   border-radius: 50%;
   box-shadow: 35px 35px 0 10px var(--white);
   pointer-events: none;
+  transition: 1s;
 }
 .navigation ul li:hover a::after,
 .navigation ul li.hovered a::after {
@@ -131,6 +133,7 @@ body {
   border-radius: 50%;
   box-shadow: 35px -35px 0 10px var(--white);
   pointer-events: none;
+  transition: 1s;
 }
 
 /* ===================== Main ===================== */
