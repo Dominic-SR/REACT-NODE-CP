@@ -1,0 +1,41 @@
+.auth-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: #000;
+}
+
+.auth-wrapper{
+    height: 50%;
+    width: 50%;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.login-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.image-wrapper{
+    display: flex;
+    justify-content: center;
+}
+.image-wrapper img{
+    height: 100px;
+    width: 100px;
+}
+
+.login-wrapper{
+    display: flex;
+}
+
+.login-wrapper .form-group{
+    width: 50%;
+    height: 50%;
+}
