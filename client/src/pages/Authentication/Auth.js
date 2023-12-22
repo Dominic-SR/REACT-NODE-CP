@@ -16,7 +16,7 @@ const Auth = () =>{
           
             <div className="form-content-right">
             <form className="form" onSubmit={handleSubmit}>
-                <h1>Get Started With ustoday! Create Your Accounts</h1>
+                <h1>Get Started With us today! Create Your Accounts</h1>
                 
                 <div className="form-inputs">
                     <label htmlFor='username' className="form-label">User Name</label>
