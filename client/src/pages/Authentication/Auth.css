@@ -50,6 +50,7 @@
     rgba(40,40,40) 0%,
     rgba(17,17,17) 100%);
     box-shadow: 0 15px 21px 0 rgb(0 0 0 / 11%);
+    /* animation: slideOut 2s forwards; */
 }
 
 
@@ -84,7 +85,7 @@
 .form h1{
     font-size: 1rem;
     text-align: center;
-    width: 80%;
+    width: 100%;
     margin-bottom: 1rem;
     color: white;
 }
@@ -152,15 +153,145 @@
     font-weight: 600;
 }
 
+/* Animation Keyframe */
+
+@-webkit-keyframes slideIn {
+    0% {
+      transform: translateX(-900px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @-moz-keyframes slideIn {
+    0% {
+      transform: translateX(-900px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @keyframes slideIn {
+    0% {
+      transform: translateX(-900px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+
+  @-webkit-keyframes slideOut {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(900px);
+    }
+  }
+  @-moz-keyframes slideOut {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(900px);
+    }
+  }
+  @keyframes slideOut {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(900px);
+    }
+  }
+
 /* Responsie Design */
 
 /* fold smartphones, 480x280 phones */ 
 @media only screen and (min-width:280px) and (max-width:319px){
+    
+    .form-container{
+        flex-direction: column;
+        height: 120%;
+    }
+
+    .form-content-left{
+        width: 70%;
+        height: auto;
+    }
+
+    .form-content-right{
+        width: 70%;
+        height: auto;
+    }
+    /* .form-content-left{
+        border-radius: 10px 10px 0px 0px;
+    } */
+    .form-content-right{
+        border-radius: 0px 0px 10px 10px;
+    }
 
 }
 
 /* smartphones, iPhone, portrait 480x320 phones */ 
 @media only screen and (min-width:320px) and (max-width:480px){
+    .form-container{
+        flex-direction: column;
+    }
+
+    .form-content-left{
+        width: 70%;
+        height: auto;
+        padding: 10px 0px;
+    }
+
+    .form-content-right{
+        width: 70%;
+        height: auto;
+        padding: 10px 0px;
+    }
+    /* .form-content-left{
+        border-radius: 10px 10px 0px 0px;
+    } */
+    .form-content-right{
+        border-radius: 0px 0px 10px 10px;
+    }
+}
+
+/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ 
+@media only screen and (min-width:481px) and (max-width:640px){
+    .main-container{
+      height: 100vh;
+    }
+
+    .form-container{
+        flex-direction: column;
+    }
+
+    .form-content-left{
+        width: 70%;
+        height: auto;
+    }
+
+    .form-content-right{
+        width: 70%;
+        height: auto;
+    }
+    /* .form-content-left{
+        border-radius: 10px 10px 0px 0px;
+    } */
+    .form-content-right{
+        border-radius: 0px 0px 10px 10px;
+    }
+}
+
+/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
+@media only screen and (min-width:641px) and (max-width:960px){
+    .main-container{
+      height: 110vh;
+    }
+
     .form-container{
         flex-direction: column;
     }
@@ -174,16 +305,12 @@
         width: 70%;
         height: 60%;
     }
-}
-
-/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ 
-@media only screen and (min-width:481px) and (max-width:640px){
-
-}
-
-/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
-@media (min-width:641px)  { 
-
+    /* .form-content-left{
+        border-radius: 10px 10px 0px 0px;
+    } */
+    .form-content-right{
+        border-radius: 0px 0px 10px 10px;
+    }
 }
 
 /* tablet, landscape iPad, lo-res laptops ands desktops */
