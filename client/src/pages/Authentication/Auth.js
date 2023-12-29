@@ -16,11 +16,11 @@ const Auth = () =>{
 
     const {handleChange, values, handleSubmit, errors} = useForm(validate);
     return(
-        <>
-        <div className='form-container'>
+        <div className='main-container'>
+        
             {/* <span className='close-btn'>x</span> */}
             {login?
-                <>
+                <div className='form-container'>
                 <div className="form-content-right">
                 <form className="form" onSubmit={handleSubmit}>
                     <h1>Login</h1>
@@ -63,12 +63,12 @@ const Auth = () =>{
                 <div className='form-content-left'>
                     <img src='https://media.istockphoto.com/id/1322511315/vector/nest-bird-animal-black-logo-design.jpg?s=612x612&w=0&k=20&c=NsmYxR6aBl7rJ0nfUNO2olIZxrRcUwIciz_H_aE2pGk=' alt='left' className='form-img' />
                 </div>
-                </>:<>
-                <div className='form-content-left'>
+                </div>:<div className='form-container'>
+                <div className='form-content-left left'>
                     <img src='https://media.istockphoto.com/id/1322511315/vector/nest-bird-animal-black-logo-design.jpg?s=612x612&w=0&k=20&c=NsmYxR6aBl7rJ0nfUNO2olIZxrRcUwIciz_H_aE2pGk=' alt='left' className='form-img' />
                 </div>
             
-                <div className="form-content-right">
+                <div className="form-content-right right">
                 <form className="form" onSubmit={handleSubmit}>
                     <h1>Get Started With us today! Create Your Accounts</h1>
                     
@@ -134,11 +134,9 @@ const Auth = () =>{
                     </span>
                 </form>
             </div>
-            </>
+            </div>
             }
         </div>
-        
-        </>
     )
 }
 
