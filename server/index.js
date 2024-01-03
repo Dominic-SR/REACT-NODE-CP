@@ -1,7 +1,12 @@
 const express = require('express');
 const app = express();
-var indexRouter = require('./routes/index.routes');
+const indexRouter = require('./routes/index.routes');
+const dotenv = require('dotenv')
+dotenv.config()
 
+console.log(`Your port is ${process.env.PORT}`);
+
+app.use(express.json())
 app.use('/nest-billing',indexRouter)
 
 app.listen(5000,function(){

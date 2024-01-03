@@ -1,4 +1,6 @@
-const mysql = require('mysql');
+const mysql = require('mysql2');
+const dotenv = require('dotenv')
+dotenv.config()
 
 const database = mysql.createConnection({
     host: process.env.DB_HOST,
