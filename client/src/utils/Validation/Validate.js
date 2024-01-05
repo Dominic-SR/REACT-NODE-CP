@@ -12,18 +12,11 @@ export default function validate(values){
         errors.email ="Email address is invalid";
     }
 
-    if(!values.password.trim()){
-        errors.password ="Password required";
+    if(!values.mobileno.trim()){
+        errors.mobileno ="Mobile Number required";
     }
-    else if(values.password.length < 6){
-        errors.password ="Password needs to be 6 characters or more";
-    }
-
-    if(!values.password2.trim()){
-        errors.password2 ="Password required";
-    }
-    else if(values.password2 !== values.password){
-        errors.password2 = "Passwords do not match"
+    else if(!/^(\+\d{1,3}[- ]?)?\d{10}$/.test(values.mobileno)){
+        errors.mobileno ="Mobile number must be valid and contain 10 digits";
     }
 
     return errors;

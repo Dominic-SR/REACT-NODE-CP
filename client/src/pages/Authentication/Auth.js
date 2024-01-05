@@ -101,31 +101,17 @@ const Auth = () =>{
                     </div>
 
                     <div className="form-inputs">
-                        <label htmlFor='password' className="form-label">Password</label>
+                        <label htmlFor='mobileno' className="form-label">Mobile No</label>
                         <input 
-                        id="password"
-                        type="password"
-                        name="password"
+                        id="mobileno"
+                        type="number"
+                        name="mobileno"
                         className="form-input"
-                        placeholder="Enter your password"
+                        placeholder="Enter your MobileNo"
                         value={values.password}
                         onChange={handleChange}
                         />
-                        {errors.password && <p>{errors.password}</p>}
-                    </div>
-
-                    <div className="form-inputs">
-                        <label htmlFor='password2' className="form-label">Confirm Password</label>
-                        <input 
-                        id="password2"
-                        type="password"
-                        name="password2"
-                        className="form-input"
-                        placeholder="Enter your Confirm password"
-                        value={values.password2}
-                        onChange={handleChange}
-                        />
-                        {errors.password2 && <p>{errors.password2}</p>}
+                        {errors.mobileno && <p>{errors.mobileno}</p>}
                     </div>
                     
                     <button className='form-input-btn' type='submit'>Sign Up</button>
