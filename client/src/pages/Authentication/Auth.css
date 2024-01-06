@@ -129,6 +129,7 @@ input[type=number]::-webkit-outer-spin-button {
 .form-input::placeholder{
     color: black;
     font-size:12px;
+    font-family:'Times New Roman', Times, serif;
 }
 
 .form-input-btn{

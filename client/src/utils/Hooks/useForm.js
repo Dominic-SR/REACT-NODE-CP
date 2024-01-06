@@ -27,6 +27,9 @@ const handleChange = (e) =>{
 const handleSubmit = (event) => {
     event.preventDefault();
     setErrors(validate(values));
+    if(Object.keys(errors).length === 0){
+        console.log("PayLoad",values);
+    }
 }
 
 return {handleChange, values, handleSubmit, errors}
