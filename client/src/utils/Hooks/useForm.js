@@ -1,5 +1,4 @@
-import { useEffect } from "react";
-const useForm = ({validate,values,setValues,errors,setErrors,setFormValidation,submitValue, setSubmitValue}) => {
+const useForm = ({validate,values,setValues,errors,setErrors,setFormValidation}) => {
 
 const handleChange = (e) =>{
     const {name, value} = e.target;
@@ -17,19 +16,11 @@ const handleChange = (e) =>{
 
 const handleSubmit = async(event) => {
     event.preventDefault();
-    await setErrors(validate(values));
-    await submitFunction()
+    setErrors(validate(values));
+    setFormValidation(true)
 }
 
-const submitFunction = () =>{
-    console.log("===>",errors);
-    // if(Object.keys(errors).length === 0){
-    //     setFormValidation(true)
-    // }
-}
-
-
-return {handleChange, values, handleSubmit, errors}
+return {handleChange, handleSubmit, values, errors}
 }
 
 export default useForm

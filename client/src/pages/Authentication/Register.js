@@ -1,10 +1,9 @@
-import React,{useState} from "react";
+import React,{useState,useEffect} from "react";
 import useForm from '../../utils/Hooks/useForm';
 import validate from '../../utils/Validation/Validate';
 import "./Auth.css";
 
 const Register = (props) =>{
-
 
     const [values, setValues] = useState({
         username:"",
@@ -12,13 +11,21 @@ const Register = (props) =>{
         mobileno:"",
     })
     const [errors, setErrors] = useState({});
-    const [formValidation, setFormValidation] = useState(false)
-    const [submitValue, setSubmitValue] = useState(false)
-    
-    const {handleChange, handleSubmit} = useForm({validate,values,setValues,errors,setErrors,setFormValidation,submitValue, setSubmitValue});
+    const [formValidation, setFormValidation] = useState(false);
 
 
-    console.log("valid",formValidation);
+    const {handleChange, handleSubmit} = useForm({validate,values,setValues,errors,setErrors,setFormValidation});
+
+    useEffect(()=>{
+        if(formValidation && (Object.keys(errors).length === 0)){
+            console.log("API CALL");
+            // API CALLING
+        setFormValidation(false)
+        }else{
+            setFormValidation(false)
+        }
+    },[formValidation,errors])
+
 
     return(
         <div className='form-container'>
@@ -48,7 +55,7 @@ const Register = (props) =>{
                 <label htmlFor='email' className="form-label">Email</label>
                 <input 
                 id="email"
-                type="email"
+                type="type"
                 name="email"
                 className="form-input"
                 placeholder="Enter your email"

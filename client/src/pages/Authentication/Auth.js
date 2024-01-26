@@ -10,9 +10,7 @@ const Auth = () =>{
     const pageSwipFunction = () =>{
         setLogin(!login)
     }
-
     
-
     return(
         <div className='main-container'>
             {login === true?
