@@ -1,8 +1,24 @@
-import React from "react";
+import React,{useState} from "react";
+import useForm from '../../utils/Hooks/useForm';
+import validate from '../../utils/Validation/Validate';
 import "./Auth.css";
 
 const Register = (props) =>{
 
+
+    const [values, setValues] = useState({
+        username:"",
+        email:"",
+        mobileno:"",
+    })
+    const [errors, setErrors] = useState({});
+    const [formValidation, setFormValidation] = useState(false)
+    const [submitValue, setSubmitValue] = useState(false)
+    
+    const {handleChange, handleSubmit} = useForm({validate,values,setValues,errors,setErrors,setFormValidation,submitValue, setSubmitValue});
+
+
+    console.log("valid",formValidation);
 
     return(
         <div className='form-container'>
@@ -11,7 +27,7 @@ const Register = (props) =>{
         </div>
     
         <div className="form-content-right right">
-        <form className="form" onSubmit={props.handleSubmit}>
+        <form className="form" onSubmit={handleSubmit}>
             <h1>Get Started With us today! Create Your Accounts</h1>
             
             <div className="form-inputs">
@@ -22,10 +38,10 @@ const Register = (props) =>{
                 name="username"
                 className="form-input"
                 placeholder="Enter your username"
-                value={props.values.username}
-                onChange={props.handleChange}
+                value={values.username}
+                onChange={handleChange}
                 />
-                {props.errors.username && <p>{props.errors.username}</p>}
+                {errors.username && <p>{errors.username}</p>}
             </div>
 
             <div className="form-inputs">
@@ -36,10 +52,10 @@ const Register = (props) =>{
                 name="email"
                 className="form-input"
                 placeholder="Enter your email"
-                value={props.values.email}
-                onChange={props.handleChange}
+                value={values.email}
+                onChange={handleChange}
                 />
-                {props.errors.email && <p>{props.errors.email}</p>}
+                {errors.email && <p>{errors.email}</p>}
             </div>
 
             <div className="form-inputs">
@@ -50,15 +66,15 @@ const Register = (props) =>{
                 name="mobileno"
                 className="form-input"
                 placeholder="Enter your MobileNo"
-                value={props.values.password}
-                onChange={props.handleChange}
+                value={values.password}
+                onChange={handleChange}
                 />
-                {props.errors.mobileno && <p>{props.errors.mobileno}</p>}
+                {errors.mobileno && <p>{errors.mobileno}</p>}
             </div>
             
             <button className='form-input-btn' type='submit'>Sign Up</button>
             <span className='form-input-login'>
-                Already have an account? login <a href="#" onClick={props.loginPageFunction}>here</a>
+                Already have an account? login <a href="#" onClick={props.pageSwipFunction}>here</a>
             </span>
         </form>
     </div>

@@ -4,7 +4,7 @@ import "./Auth.css";
 const Login = (props) =>{
 
         return(<div className='form-container'>
-                <div className="form-content-right">
+                {/* <div className="form-content-right">
                 <form className="form" onSubmit={props.handleSubmit}>
                     <h1>Login</h1>
     
@@ -38,10 +38,10 @@ const Login = (props) =>{
                     
                     <button className='form-input-btn' type='submit'>Sign Up</button>
                     <span className='form-input-login'>
-                    Don't have an account yet? Sign up <a href="#" onClick={props.signUpFunction}>here</a>
+                    Don't have an account yet? Sign up <a href="#" onClick={props.pageSwipFunction}>here</a>
                     </span>
                 </form>
-                </div>
+                </div> */}
     
                 <div className='form-content-left'>
                     <img src='https://media.istockphoto.com/id/1322511315/vector/nest-bird-animal-black-logo-design.jpg?s=612x612&w=0&k=20&c=NsmYxR6aBl7rJ0nfUNO2olIZxrRcUwIciz_H_aE2pGk=' alt='left' className='form-img' />
