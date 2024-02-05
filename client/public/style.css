@@ -1,3 +1,8 @@
+:root{
+    --primary-color:#fff;
+    --secondary-color:#000;
+}
+
 body{
 font-family:'Times New Roman', Times, serif;
 }

@@ -1,7 +1,9 @@
 import React,{useState,useEffect} from "react";
 import useForm from '../../utils/Hooks/useForm';
-import validate from '../../utils/Validation/Validate';
+import validate from '../../utils/Validation/Registervalidation';
+import { AxiosInstance } from "../../utils/api/AxiosInstance";
 import "./Auth.css";
+import { toast } from "react-toastify";
 
 const Register = (props) =>{
 
@@ -9,17 +11,35 @@ const Register = (props) =>{
         username:"",
         email:"",
         mobileno:"",
+        password:"",
+        cpassword:"",
+        about:""
     })
     const [errors, setErrors] = useState({});
     const [formValidation, setFormValidation] = useState(false);
 
 
     const {handleChange, handleSubmit} = useForm({validate,values,setValues,errors,setErrors,setFormValidation});
-
     useEffect(()=>{
         if(formValidation && (Object.keys(errors).length === 0)){
-            console.log("API CALL");
-            // API CALLING
+   
+            let payload = {
+                "user_name":values.username,
+                "user_email":values.email,
+                "user_mobileno":values.mobileno,
+                "user_password":values.password,
+                "user_about":values.about
+             }
+            
+             //REGISTER API CALLING
+            AxiosInstance().post(`/user/register`,payload).then((res)=>{
+                if(res?.status === 200 && res.data.status){
+                    toast.success(res?.data?.message, {onClose:()=>{ props.setLogin(true)}, autoClose:1000, progressClassName:"toast-success"}   )
+                }else{
+                    toast.error(res?.data?.message,{progressClassName:"toast-error"})
+                }
+                }).catch((er) => er);
+   
         setFormValidation(false)
         }else{
             setFormValidation(false)
@@ -73,10 +93,52 @@ const Register = (props) =>{
                 name="mobileno"
                 className="form-input"
                 placeholder="Enter your MobileNo"
-                value={values.password}
+                value={values.mobileno}
                 onChange={handleChange}
                 />
                 {errors.mobileno && <p>{errors.mobileno}</p>}
+            </div>
+
+            <div className="form-inputs">
+                <label htmlFor='password' className="form-label">password</label>
+                <input 
+                id="password"
+                type="password"
+                name="password"
+                className="form-input"
+                placeholder="Enter your Password"
+                value={values.password}
+                onChange={handleChange}
+                />
+                {errors.password && <p>{errors.password}</p>}
+            </div>
+
+            <div className="form-inputs">
+                <label htmlFor='cpassword' className="form-label">Confirm password</label>
+                <input 
+                id="cpassword"
+                type="password"
+                name="cpassword"
+                className="form-input"
+                placeholder="Enter your Confirm Password"
+                value={values.cpassword}
+                onChange={handleChange}
+                />
+                {errors.cpassword && <p>{errors.cpassword}</p>}
+            </div>
+
+            <div className="form-inputs">
+                <label htmlFor='mobileno' className="form-label">About us</label>
+                <textarea 
+                id="about"
+                type="text"
+                name="about"
+                className="form-input"
+                placeholder="Enter your About"
+                value={values.about}
+                onChange={handleChange}
+                ></textarea>
+                {errors.about && <p>{errors.about}</p>}
             </div>
             
             <button className='form-input-btn' type='submit'>Sign Up</button>
