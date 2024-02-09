@@ -17,7 +17,6 @@ const handleChange = (e) =>{
 const handleSubmit = async(event) => {
     event.preventDefault();
     setErrors(validate(values));
-    console.log("ERR",errors);
     setFormValidation(true)
 }
 

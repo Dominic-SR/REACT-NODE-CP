@@ -2,8 +2,9 @@ import React,{useState,useEffect} from "react";
 import useForm from '../../utils/Hooks/useForm';
 import validate from '../../utils/Validation/Registervalidation';
 import { AxiosInstance } from "../../utils/api/AxiosInstance";
-import "./Auth.css";
 import { toast } from "react-toastify";
+import "./Auth.css";
+
 
 const Register = (props) =>{
 
@@ -46,6 +47,7 @@ const Register = (props) =>{
         }
     },[formValidation,errors])
 
+    console.log("------>",errors)
 
     return(
         <div className='form-container'>

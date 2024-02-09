@@ -1,8 +1,9 @@
 :root{
-    --primary-color:#fff;
-    --secondary-color:#000;
+    --primary-color:#000;
+    --secondary-color:linear-gradient( 90deg, rgba(40,40,40) 0%, rgba(17,17,17) 100%);
 }
 
 body{
 font-family:'Times New Roman', Times, serif;
+background: var(--primary-color);
 }
