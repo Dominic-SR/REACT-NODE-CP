@@ -17,6 +17,7 @@ input[type=number]::-webkit-outer-spin-button {
     align-items: center;
     height: 100%;
     width: 100%;
+    animation: ease-in 0.5s slideIn;
 }
 
 .close-btn{
@@ -32,9 +33,10 @@ input[type=number]::-webkit-outer-spin-button {
 .form-content-left{
     height: 70%;
     width: 30%;
-    border-radius: 10px 0 0 10px;
+    background: #ffffff47; 
+    border-radius: 0px 10px 10px 0px;
     position: relative;
-    box-shadow: 0 15px 21px 0 rgb(0 0 0 / 11%);
+    /* box-shadow: 0 15px 21px 0 rgb(0 0 0 / 11%); */
 }
 
 .form-img{    
@@ -47,9 +49,10 @@ input[type=number]::-webkit-outer-spin-button {
 .form-content-right{
     height: 70%;
     width: 30%;
-    border-radius: 0 10px 10px 0;
+    border-radius: 10px 0px 0px 10px;
     position: relative;
-    box-shadow: 0 15px 21px 0 rgb(0 0 0 / 11%);
+    background: #ffffff47;
+    /* box-shadow: 0 15px 21px 0 rgb(0 0 0 / 11%); */
     /* animation: slideOut 2s forwards; */
 }
 
@@ -57,7 +60,7 @@ input[type=number]::-webkit-outer-spin-button {
     position: relative;
     top: 50%;
     left: 50%;
-    padding: 20px 0px;
+    padding: 30px 0px 20px;
     transform: translate(-50%, -50%);
     width: 90%;
     height: 98%;
@@ -114,7 +117,7 @@ input[type=number]::-webkit-outer-spin-button {
     box-sizing: border-box;
     border: 2px solid var(--secondary-color);
     border-radius: 4px;
-    background-color: var(--primary-color);
+    background-color: #fff;
     font-size: 12px;
     resize: none;
     font-family: inherit;
@@ -132,7 +135,7 @@ input[type=number]::-webkit-outer-spin-button {
     padding: 20px;
     margin-top: 10px;
     border-radius: 2px;
-    background: linear-gradient(to right, #000000, white);
+    background: var(--primary-color);
     outline: none;
     border: none;
     color: white;

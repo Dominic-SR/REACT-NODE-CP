@@ -51,12 +51,13 @@ const Register = (props) =>{
 
     return(
         <div className='form-container'>
+         <div className="form-content-right right">
+             <img src='images/logo.png' alt='left' className='form-img' />
+         </div>
+
         <div className='form-content-left left'>
-            <img src='https://media.istockphoto.com/id/1322511315/vector/nest-bird-animal-black-logo-design.jpg?s=612x612&w=0&k=20&c=NsmYxR6aBl7rJ0nfUNO2olIZxrRcUwIciz_H_aE2pGk=' alt='left' className='form-img' />
-        </div>
-    
-        <div className="form-content-right right">
-        <form className="form" onSubmit={handleSubmit}>
+          
+            <form className="form" onSubmit={handleSubmit}>
             <h1>Get Started With us today! Create Your Accounts</h1>
             
             <div className="form-inputs">
@@ -148,7 +149,10 @@ const Register = (props) =>{
                 Already have an account? login <a href="#" onClick={props.pageSwipFunction}>here</a>
             </span>
         </form>
-    </div>
+        
+        </div>
+    
+       
     </div>
     )
 }
