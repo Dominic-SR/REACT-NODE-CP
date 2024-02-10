@@ -1,16 +1,16 @@
 import React from 'react';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import './App.css';
-import Home from './pages/Home/Home';
 import Auth from './pages/Authentication/Auth'
+import Main from './pages/Main';
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route  path="/auth/login" element={<Auth/>}/>
+        <Route path="/login" element={<Auth/>}/>
         <Route path="/" element={<Auth/>}/>
-        <Route path="/home" element={<Home/>} />
+        <Route path="/home" element={<Main/>} />
       </Routes>
     </Router>
   );

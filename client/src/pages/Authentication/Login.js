@@ -7,7 +7,7 @@ import "./Auth.css";
 import { useNavigate } from "react-router-dom";
 
 const Login = (props) =>{
-
+    const navigate = useNavigate();
     const [values, setValues] = useState({
         email:"",
         password:"",
@@ -24,11 +24,15 @@ const Login = (props) =>{
                 "user_email":values.email,
                 "user_password":values.password,
                }
-
+               
                //LOGIN API CALLING
                 AxiosInstance().post(`/user/login`,payload).then((res)=>{
                 if(res?.status === 200 && res.data.status){
-                    toast.success(res?.data?.message, {onClose:()=>{ props.setLogin(true)}, autoClose:1000, progressClassName:"toast-success"}   )
+                    toast.success(res?.data?.message, {onClose:()=>{ 
+                        localStorage.setItem('auth',JSON.stringify(res?.data?.token))
+                        localStorage.setItem('userData',JSON.stringify(res?.data?.data))
+                        navigate('/home')
+                    }, autoClose:1000, progressClassName:"toast-success"}   )
                 }else{
                     toast.error(res?.data?.message,{progressClassName:"toast-error"})
                 }
