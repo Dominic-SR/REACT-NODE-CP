@@ -1,9 +1,10 @@
 /* =============== Navigation ================ */
 .navigation {
     position: fixed;
-    width: 290px;
-    height: 98%;
+    top: 10px;
     left: 10px;
+    width: 290px;
+    height: 95%;
     background: rgba( 255, 255, 255, 0.25 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 4px );
@@ -16,6 +17,7 @@
     border-radius: 20px;
     animation: 1s ease 0s 1 slideInFromLeft;
   }
+  
   .navigation.active {
     width: 80px;
   }
@@ -37,7 +39,7 @@
   
   .navigation ul li:hover,
   .navigation ul li.hovered {
-    background-color: var(--white);
+    background-color: #fff;
   }
   
   .navigation ul li:nth-child(1) {
@@ -51,7 +53,7 @@
     width: 100%;
     display: flex;
     text-decoration: none;
-    color: var(--white);
+    color: #fff;
     transition: 1s;
   }
   

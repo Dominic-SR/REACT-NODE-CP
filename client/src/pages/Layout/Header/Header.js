@@ -1,5 +1,5 @@
 import React from "react"
-
+import "./Header.css"
 const Header = () =>{
     return(
         <div className="topbar">
@@ -15,7 +15,7 @@ const Header = () =>{
         </div>
 
         <div className="user">
-            <img src="assets/imgs/customer01.jpg" alt="" />
+            <img src="/images/user.jpg" alt="" />
         </div>
     </div>
     )
