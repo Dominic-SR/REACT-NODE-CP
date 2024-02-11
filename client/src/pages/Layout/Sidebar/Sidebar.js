@@ -1,6 +1,14 @@
 import React from "react";
+import {useNavigate} from 'react-router-dom'; 
 import "./Sidebar.css";
+
 const Sidebar = () =>{
+const navigate = useNavigate()
+
+const logOut = () =>{
+    localStorage.removeItem("auth");
+    window.location.reload();
+}
     return(
         <div className="navigation">
         <ul>
@@ -68,7 +76,7 @@ const Sidebar = () =>{
             </li>
 
             <li>
-                <a href="#">
+                <a href="#" onClick={logOut}>
                     <span className="icon">
                         <ion-icon name="log-out-outline"></ion-icon>
                     </span>

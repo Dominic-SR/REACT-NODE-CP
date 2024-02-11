@@ -22,6 +22,7 @@ const [authentication, setAuthentication] = useState(false)
                 <div className="main">
                     <Header />
                     <Routes>
+                    <Route path="/" element={<Dashboard />} />
                     <Route path="/home" element={<Dashboard />} />
                     </Routes>
                 </div>
