@@ -56,15 +56,15 @@ const userController={
 
             if(user_email.length > 0 && user_password.length > 0){
                 let [verifyData] = await userModal.loginUser(user_email)
-
                 if(verifyData.length > 0){
                     let verifyPassword = await bcrypt.compare(user_password,verifyData[0].user_password);
                     if(verifyPassword === true){
-                        let userToken = jwt.sign({user_email:verifyData[0].user_email},'nest_billing');
+                        let userToken = jwt.sign({user_email:verifyData[0].user_email},'auth');
                         res.header('auth',userToken).json({
                             status:true,
                             data:verifyData[0],
                             token:userToken,
+                            message: "Login Succesfully...!",
                         });
                     }
                     else{
