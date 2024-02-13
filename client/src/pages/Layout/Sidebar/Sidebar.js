@@ -5,6 +5,11 @@ import "./Sidebar.css";
 const Sidebar = () =>{
 const navigate = useNavigate()
 
+const pageTrigger = (company) =>{
+    console.log("rrrr",company);
+    navigate(`/${company}`);
+}
+
 const logOut = () =>{
     localStorage.removeItem("auth");
     window.location.reload();
@@ -13,7 +18,7 @@ const logOut = () =>{
         <div className="navigation">
         <ul>
             <li>
-                <a href="#">
+                <a href="#" >
                     <span className="icon">
                         <ion-icon name="logo-apple"></ion-icon>
                     </span>
@@ -22,7 +27,7 @@ const logOut = () =>{
             </li>
 
             <li>
-                <a href="#">
+                <a href="#" onClick={()=>{pageTrigger('home')}}>
                     <span className="icon">
                         <ion-icon name="home-outline"></ion-icon>
                     </span>
@@ -31,11 +36,11 @@ const logOut = () =>{
             </li>
 
             <li>
-                <a href="#">
+                <a href="#" onClick={()=>{pageTrigger('company')}}>
                     <span className="icon">
                         <ion-icon name="people-outline"></ion-icon>
                     </span>
-                    <span className="title">Customers</span>
+                    <span className="title">Company</span>
                 </a>
             </li>
 

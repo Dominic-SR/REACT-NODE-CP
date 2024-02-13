@@ -4,6 +4,7 @@ import Auth from "./pages/Authentication/Auth"
 import Sidebar from "./pages/Layout/Sidebar/Sidebar";
 import Header from "./pages/Layout/Header/Header";
 import Dashboard from "./pages/Dashboard/Dashboard";
+import Company from "./pages/Company/Company";
 const PageRoutes = () =>{
 
 const [authentication, setAuthentication] = useState(false)
@@ -22,8 +23,8 @@ const [authentication, setAuthentication] = useState(false)
                 <div className="main">
                     <Header />
                     <Routes>
-                    <Route path="/" element={<Dashboard />} />
                     <Route path="/home" element={<Dashboard />} />
+                    <Route path="/company" element={<Company />} />
                     </Routes>
                 </div>
             </div>
