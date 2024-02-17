@@ -6,9 +6,12 @@
     justify-content: space-around;
     gap: 20px;
     padding: 20px;
+    max-height: 100%;
+    overflow-x: hidden;
+    
 }
 
-.page-container .form-container { 
+.page-container .form-group-container { 
     position: relative;
     width: 100%;
     height: 100%;
@@ -20,4 +23,63 @@
     box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
     border-radius: 20px;
     animation: 1s ease 0s 1 slideInFromTop;
+    overflow-x: scroll;
 }
+
+
+.page-container .cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .cardHeader h2 {
+    font-weight: 600;
+    color: #fff
+  }
+  .cardHeader .btn {
+    position: relative;
+    padding: 5px 10px;
+    background: var(--blue);
+    text-decoration: none;
+    color: #fff;
+    border-radius: 6px;
+  }
+
+ .form-group-row-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .form-group-inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    width: 100%;
+    align-items: center;
+  }
+
+  .form-group-inputs input{
+    border-radius: 20px;
+    padding: 10px;
+    width: 80%;
+    height: 60px;
+  }
+
+  .form-group-btn{
+    width: 30%;
+    height: 50px;
+    padding: 20px;
+    margin: 80px auto;
+    border-radius: 2px;
+    background: var(--primary-color);
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+  }

@@ -3,11 +3,80 @@ import "./AddCompany.css";
 const AddCompany = (props) =>{
     return(
         <div className="page-container">
-            <div className="form-container">
+            <div className="form-group-container">
+            <form >
                 <div className="cardHeader">
                 <h2>Company List</h2>
-                <a href="#" className="btn" onClick={()=>{props.setHandleForm(prevState => !prevState)}}>Add Company</a>
+                <a href="#" className="btn" onClick={()=>{props.setHandleForm(prevState => !prevState)}}>View Company List</a>
                 </div>
+                <div className="form-group-row-container">
+                    <div className="form-group-inputs">
+                    <label htmlFor='username' className="form-label">Comapny Name</label>
+                    <input 
+                    id="username"
+                    type="text"
+                    name="username"
+                   
+                    />
+                    </div>
+
+                    <div className="form-group-inputs">
+                    <label htmlFor='username' className="form-label">Company Email</label>
+                    <input 
+                    id="username"
+                    type="text"
+                    name="username"
+                   
+                    />
+                    </div>
+                </div>
+
+                <div className="form-group-row-container">
+                    <div className="form-group-inputs">
+                    <label htmlFor='username' className="form-label">Comapny MobileNo</label>
+                    <input 
+                    id="username"
+                    type="text"
+                    name="username"
+                 
+                    />
+                    </div>
+
+                    <div className="form-group-inputs">
+                    <label htmlFor='username' className="form-label">Company Password</label>
+                    <input 
+                    id="username"
+                    type="text"
+                    name="username"
+                    
+                    />
+                    </div>
+                </div>
+
+                <div className="form-group-row-container">
+                    <div className="form-group-inputs">
+                    <label htmlFor='username' className="form-label">Comapny Address</label>
+                    <input 
+                    id="username"
+                    type="text"
+                    name="username"
+                
+                    />
+                    </div>
+
+                    <div className="form-group-inputs">
+                    <label htmlFor='username' className="form-label">No of Buses</label>
+                    <input 
+                    id="username"
+                    type="Number"
+                    name="username"
+                   
+                    />
+                    </div>
+                </div>
+                
+                <button className='form-group-btn' type='submit'>Add Company</button>
+            </form>
             </div>
         </div>
     )
