@@ -40,7 +40,8 @@
     padding-left: 35px;
     font-size: 18px;
     outline: none;
-    border: 1px solid var(--black2);
+    color: #fff;
+    border: 1px solid #bdbdbd;
     background: rgba(255, 255, 255, 0.25);
     box-shadow:  0 8px 32px 0 rgb(0 1 18 / 37%);
     backdrop-filter: blur( 4px );

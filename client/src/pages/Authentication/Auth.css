@@ -35,11 +35,12 @@ input[type=number]::-webkit-outer-spin-button {
     cursor: pointer;
 }
 
-.form-content-left{
+.register-form-content{
     height: 70%;
-    width: 30%;
+    width: 40%;
     background: #ffffff47; 
-    border-radius: 0px 10px 10px 0px;
+    border-radius: 10px 10px 10px 10px;
+    border: 1px solid #bdbdbd;
     position: relative;
     /* box-shadow: 0 15px 21px 0 rgb(0 0 0 / 11%); */
 }
@@ -51,20 +52,20 @@ input[type=number]::-webkit-outer-spin-button {
     cursor: pointer;
 }
 
-.form-content-right{
+.login-form-content{
     height: 70%;
-    width: 30%;
-    border-radius: 10px 0px 0px 10px;
+    width: 40%;
+    border-radius: 10px 10px 10px 10px;
+    border: 1px solid #bdbdbd;
     position: relative;
     background: #ffffff47;
-    /* box-shadow: 0 15px 21px 0 rgb(0 0 0 / 11%); */
-    /* animation: slideOut 2s forwards; */
 }
 
 .form{
     position: relative;
     top: 0px;
     left: 0px;
+    font-size: 18px;
     padding: 30px 0px 20px;
     /* transform: translate(-50%, -50%); */
     width: 100%;
@@ -80,7 +81,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .form h1{
-    font-size: 1rem;
+    font-size: 18px;
     text-align: center;
     width: 100%;
     margin-bottom: 1rem;
@@ -88,8 +89,9 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .form-inputs{
-    margin-bottom: 0.5rem;
+    margin-bottom: 25px;
     width: 80%;
+    text-align: center;
 }
 
 .form-inputs p {
@@ -100,7 +102,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .form-label{
     display: inline-block;
-    font-size: 0.8rem;
+    font-size: 18px;
     margin-bottom: 6px;
     color: white
 }
@@ -113,6 +115,7 @@ input[type=number]::-webkit-outer-spin-button {
     height: 40px;
     width: 100%;
     border: none;
+    text-align: center;
 }
 
 .form-inputs textarea {
@@ -131,7 +134,6 @@ input[type=number]::-webkit-outer-spin-button {
 .form-input::placeholder{
     color: black;
     font-size:12px;
-    font-family:'Times New Roman', Times, serif;
 }
 
 .form-input-btn{
@@ -145,6 +147,9 @@ input[type=number]::-webkit-outer-spin-button {
     border: none;
     color: white;
     font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .form-input-btn:hover{
@@ -228,20 +233,20 @@ input[type=number]::-webkit-outer-spin-button {
         height: 120%;
     }
 
-    .form-content-left{
+    .register-form-content{
         width: 70%;
         height: auto;
     }
 
-    .form-content-right{
+    .login-form-content{
         width: 70%;
         height: auto;
     }
-    /* .form-content-left{
+    /* .register-form-content{
         border-radius: 10px 10px 0px 0px;
     } */
-    .form-content-right{
-        border-radius: 0px 0px 10px 10px;
+    .login-form-content{
+        border-radius: 10px 10px 10px 10px;
     }
 
 }
@@ -252,22 +257,22 @@ input[type=number]::-webkit-outer-spin-button {
         flex-direction: column;
     }
 
-    .form-content-left{
+    .register-form-content{
         width: 70%;
         height: auto;
-        padding: 0px 0px 10px 10px;
+        padding: 10px 10px 10px 10px;
     }
 
-    .form-content-right{
+    .login-form-content{
         width: 70%;
         height: auto;
         padding: 10px 0px;
     }
-    /* .form-content-left{
+    /* .register-form-content{
         border-radius: 10px 10px 0px 0px;
     } */
-    .form-content-right{
-        border-radius: 10px 10px 0px 0px;
+    .login-form-content{
+        border-radius: 10px 10px 10px 10px;
     }
 }
 
@@ -281,20 +286,20 @@ input[type=number]::-webkit-outer-spin-button {
         flex-direction: column;
     }
 
-    .form-content-left{
+    .register-form-content{
         width: 70%;
         height: auto;
     }
 
-    .form-content-right{
+    .login-form-content{
         width: 70%;
         height: auto;
     }
-    /* .form-content-left{
+    /* .register-form-content{
         border-radius: 10px 10px 0px 0px;
     } */
-    .form-content-right{
-        border-radius: 0px 0px 10px 10px;
+    .login-form-content{
+        border-radius: 10px 10px 10px 10px;
     }
 }
 
@@ -308,19 +313,19 @@ input[type=number]::-webkit-outer-spin-button {
         flex-direction: column;
     }
 
-    .form-content-left{
+    .register-form-content{
         width: 70%;
         height: 30%;
     }
 
-    .form-content-right{
+    .login-form-content{
         width: 70%;
         height: 60%;
     }
-    /* .form-content-left{
+    /* .register-form-content{
         border-radius: 10px 10px 0px 0px;
     } */
-    .form-content-right{
+    .login-form-content{
         border-radius: 0px 0px 10px 10px;
     }
 }

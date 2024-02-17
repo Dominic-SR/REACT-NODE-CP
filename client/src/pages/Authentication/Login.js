@@ -1,12 +1,13 @@
 import React,{useState,useEffect} from "react";
+import { useNavigate } from "react-router-dom";
 import useForm from '../../utils/Hooks/useForm';
 import validate from '../../utils/Validation/LoginValidation';
 import { AxiosInstance } from "../../utils/api/AxiosInstance";
 import { toast } from "react-toastify";
 import "./Auth.css";
-import { useNavigate } from "react-router-dom";
 
-const Login = (props) =>{
+
+const Login = () =>{
     const navigate = useNavigate();
     const [values, setValues] = useState({
         email:"",
@@ -43,9 +44,13 @@ const Login = (props) =>{
                 setFormValidation(false)
             }
     },[errors])
+
+    const regiterPage = () =>{
+        navigate('/register')
+    }
     
         return(<div className='form-container'>
-                <div className="form-content-right">
+                <div className="login-form-content">
                 <form className="form login" onSubmit={handleSubmit}>
                     <h1>Login your account</h1>
     
@@ -79,14 +84,11 @@ const Login = (props) =>{
                     
                     <button className='form-input-btn' type='submit'>Sign Up</button>
                     <span className='form-input-login'>
-                    Don't have an account yet? Sign up <a href="#" onClick={props.pageSwipFunction}>here</a>
+                    Don't have an account yet? Sign up <a href="#" onClick={() => regiterPage()}>here</a>
                     </span>
                 </form>
                 </div>
     
-                <div className='form-content-left'>
-                    <img src='/images/logo.png' alt='left' className='form-img' />
-                </div>
             </div>)
 
 }

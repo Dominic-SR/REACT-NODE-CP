@@ -6,13 +6,12 @@ const Sidebar = () =>{
 const navigate = useNavigate()
 
 const pageTrigger = (company) =>{
-    console.log("rrrr",company);
     navigate(`/${company}`);
 }
 
 const logOut = () =>{
     localStorage.removeItem("auth");
-    window.location.reload();
+    navigate("/login")
 }
     return(
         <div className="navigation">

@@ -1,47 +1,48 @@
-import React,{useState,useEffect} from "react"
+import React from "react"
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import Main from "./pages/Main/Main";
 import Auth from "./pages/Authentication/Auth"
-import Sidebar from "./pages/Layout/Sidebar/Sidebar";
-import Header from "./pages/Layout/Header/Header";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Company from "./pages/Company/Company";
-const PageRoutes = () =>{
+import Login from './pages/Authentication/Login';
+import Register from './pages/Authentication/Register';
 
-const [authentication, setAuthentication] = useState(false)
-    useEffect(()=>{
-        let token = localStorage.getItem('auth')
-         if(token?.length > 0){
-            setAuthentication(true)
-         }
-     },[])
 
+
+const AppRoutes = () =>{
     return(
         <BrowserRouter>
-            {authentication ?
-            <div className="container">
-                <Sidebar />
-                <div className="main">
-                    <Header />
-                    <Routes>
-                    <Route path="/home" element={<Dashboard />} />
-                    <Route path="/company" element={<Company />} />
-                    </Routes>
-                </div>
-            </div>
-            : 
-            <Routes>            
-                <Route path="/login" element={<Auth />} />
-                <Route path="/" element={<Auth />} />
+            <Routes>
+                    <Route element={<Auth />}> 
+                        <Route path="/login" element={<Login />} />
+                        <Route path="/register" element={<Register />} />
+                    </Route>
+                    <Route element={<Main />}>
+                        <Route path="/home" element={<Dashboard />} />
+                        <Route path="/company" element={<Company />} />
+                    </Route>         
             </Routes>
-            }
+            
         </BrowserRouter>
      )
 }
 
-export default PageRoutes
+export default AppRoutes;
 
 
 
 
 
 
+{/* <div className="container">
+<Sidebar />
+<div className="main">
+    <Header />
+    {console.log("AUTH")}
+    <Routes element={<ProductedRoute />}>
+        <Route path="/home" element={<Dashboard />} />
+        <Route path="/company" element={<Company />} />
+        <Route path="*" />
+    </Routes>
+</div>
+</div> */}

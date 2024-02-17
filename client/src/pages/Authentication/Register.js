@@ -1,4 +1,5 @@
 import React,{useState,useEffect} from "react";
+import { useNavigate } from "react-router-dom";
 import useForm from '../../utils/Hooks/useForm';
 import validate from '../../utils/Validation/Registervalidation';
 import { AxiosInstance } from "../../utils/api/AxiosInstance";
@@ -7,7 +8,7 @@ import "./Auth.css";
 
 
 const Register = (props) =>{
-
+    const navigate = useNavigate();
     const [values, setValues] = useState({
         username:"",
         email:"",
@@ -47,15 +48,15 @@ const Register = (props) =>{
         }
     },[formValidation,errors])
 
-    console.log("------>",errors)
+    const loginPage = () =>{
+        navigate('/login')
+    }
 
     return(
         <div className='form-container'>
-         <div className="form-content-right right">
-             <img src='images/logo.png' alt='left' className='form-img' />
-         </div>
+      
 
-        <div className='form-content-left left'>
+        <div className='register-form-content'>
           
             <form className="form" onSubmit={handleSubmit}>
             <h1>Get Started With us today! Create Your Accounts</h1>
@@ -103,7 +104,7 @@ const Register = (props) =>{
             </div>
 
             <div className="form-inputs">
-                <label htmlFor='password' className="form-label">password</label>
+                <label htmlFor='password' className="form-label">Password</label>
                 <input 
                 id="password"
                 type="password"
@@ -146,7 +147,7 @@ const Register = (props) =>{
             
             <button className='form-input-btn' type='submit'>Sign Up</button>
             <span className='form-input-login'>
-                Already have an account? login <a href="#" onClick={props.pageSwipFunction}>here</a>
+                Already have an account? login <a href="#" onClick={() => loginPage()}>here</a>
             </span>
         </form>
         
