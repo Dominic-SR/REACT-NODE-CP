@@ -1,24 +1,11 @@
-import React from "react";
+import React,{useState} from "react";
 import "./AddCompany.css";
 const AddCompany = (props) =>{
-    let imgPreiew = document.getElementById("#imagePreview")
-    let imgUpload = document.getElementById("#imageUpload")
+    const [profileImg, setProfileImg] = useState()
    
-    function readURL(input) {
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
-            reader.onload = function(e) {      
-                imgPreiew.css('background-image', 'url('+e.target.result +')');
-                imgPreiew.hide();
-                imgPreiew.fadeIn(650);
-            }
-            reader.readAsDataURL(input.files[0]);
-        }
+    const handlefile = (event) =>{
+        setProfileImg(URL.createObjectURL(event.target.files[0]))   
     }
-   
-    imgUpload?.change(function() {
-        readURL(this);
-    });
 
     return(
         <div className="page-container">
@@ -28,15 +15,14 @@ const AddCompany = (props) =>{
                 <h2>Company List</h2>
                 <a href="#" className="btn" onClick={()=>{props.setHandleForm(prevState => !prevState)}}>View Company List</a>
                 </div>
-
                 <div className="form-group-row-container">
                     <div className="avatar-upload">
                         <div className="avatar-edit">
-                            <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+                            <input type='file' id="imageUpload" onChange={handlefile} accept=".png, .jpg, .jpeg" />
                             <label htmlFor="imageUpload"></label>
                         </div>
                         <div className="avatar-preview">
-                            <div id="imagePreview" style={{backgroundImage : "url('http://i.pravatar.cc/500?img=7')"}}>
+                            <div id="imagePreview" style={{backgroundImage : `url(${profileImg})`}}>
                             </div>
                         </div>
                     </div>
