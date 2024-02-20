@@ -19,10 +19,10 @@ const AddCompany = (props) =>{
                     <div className="avatar-upload">
                         <div className="avatar-edit">
                             <input type='file' id="imageUpload" onChange={handlefile} accept=".png, .jpg, .jpeg" />
-                            <label htmlFor="imageUpload"></label>
+                            <label htmlFor="imageUpload"> <ion-icon name="add-circle-outline"></ion-icon> </label>
                         </div>
                         <div className="avatar-preview">
-                            <div id="imagePreview" style={{backgroundImage : `url(${profileImg})`}}>
+                            <div id="imagePreview" style={{backgroundImage : `url(${profileImg ? profileImg : "/images/profile-picture.png"})`}}>
                             </div>
                         </div>
                     </div>

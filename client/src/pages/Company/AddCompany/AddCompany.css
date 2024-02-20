@@ -138,6 +138,11 @@
   text-align: center;
   margin: auto;
 }
+.avatar-upload .avatar-edit label ion-icon{
+  width: 100%;
+  height: 100%;
+}
+
 .avatar-upload .avatar-preview {
   width: 192px;
   height: 192px;

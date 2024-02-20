@@ -61,9 +61,9 @@
   .page-container .table-container table tr td:last-child {
     text-align: end;
   }
-  .page-container .table-container table tr td:nth-child(2) {
+  /* .page-container .table-container table tr td:nth-child(2) {
     text-align: end;
-  }
+  } */
   .page-container .table-container table tr td:nth-child(3) {
     text-align: center;
   }

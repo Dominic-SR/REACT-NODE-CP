@@ -12,68 +12,106 @@ const CompanyList = (props) =>{
         <table>
             <thead>
                 <tr>
-                    <td>Name</td>
-                    <td>Price</td>
-                    <td>Payment</td>
-                    <td>Status</td>
+                    <td>S.No</td>
+                    <td>Comapny Name</td>
+                    <td>Email</td>
+                    <td>MobileNo</td>
+                    <td>Address</td>
+                    <td>No of Buses</td>
+                    <td>Options</td>
                 </tr>
             </thead>
 
             <tbody>
                 <tr>
-                    <td>Star Refrigerator</td>
-                    <td>$1200</td>
-                    <td>Paid</td>
-                    <td><span className="status delivered">Delivered</span></td>
+                    <td>1</td>
+                    <td>Company One</td>
+                    <td>One@gmail.com</td>
+                    <td>+91 9876543210</td>
+                    <td>5/27 New Street, New York, USA</td>
+                    <td>12</td>    
+                    <td>
+                        <ion-icon name="create-outline"></ion-icon>
+                        <ion-icon name="trash-outline"></ion-icon>
+                    </td>            
                 </tr>
 
                 <tr>
-                    <td>Dell Laptop</td>
-                    <td>$110</td>
-                    <td>Due</td>
-                    <td><span className="status pending">Pending</span></td>
+                    <td>1</td>
+                    <td>Company One</td>
+                    <td>One@gmail.com</td>
+                    <td>+91 9876543210</td>
+                    <td>5/27 New Street, New York, USA</td>
+                    <td>12</td>      
+                    <td>
+                        <ion-icon name="create-outline"></ion-icon>
+                        <ion-icon name="trash-outline"></ion-icon>
+                    </td>                      
                 </tr>
 
                 <tr>
-                    <td>Apple Watch</td>
-                    <td>$1200</td>
-                    <td>Paid</td>
-                    <td><span className="status return">Return</span></td>
+                    <td>1</td>
+                    <td>Company One</td>
+                    <td>One@gmail.com</td>
+                    <td>+91 9876543210</td>
+                    <td>5/27 New Street, New York, USA</td>
+                    <td>12</td>      
+                    <td>
+                        <ion-icon name="create-outline"></ion-icon>
+                        <ion-icon name="trash-outline"></ion-icon>
+                    </td>                      
                 </tr>
 
                 <tr>
-                    <td>Addidas Shoes</td>
-                    <td>$620</td>
-                    <td>Due</td>
-                    <td><span className="status inProgress">In Progress</span></td>
+                    <td>1</td>
+                    <td>Company One</td>
+                    <td>One@gmail.com</td>
+                    <td>+91 9876543210</td>
+                    <td>5/27 New Street, New York, USA</td>
+                    <td>12</td>      
+                    <td>
+                        <ion-icon name="create-outline"></ion-icon>
+                        <ion-icon name="trash-outline"></ion-icon>
+                    </td>                      
                 </tr>
 
                 <tr>
-                    <td>Star Refrigerator</td>
-                    <td>$1200</td>
-                    <td>Paid</td>
-                    <td><span className="status delivered">Delivered</span></td>
+                    <td>1</td>
+                    <td>Company One</td>
+                    <td>One@gmail.com</td>
+                    <td>+91 9876543210</td>
+                    <td>5/27 New Street, New York, USA</td>
+                    <td>12</td>      
+                    <td>
+                        <ion-icon name="create-outline"></ion-icon>
+                        <ion-icon name="trash-outline"></ion-icon>
+                    </td>                      
                 </tr>
 
                 <tr>
-                    <td>Dell Laptop</td>
-                    <td>$110</td>
-                    <td>Due</td>
-                    <td><span className="status pending">Pending</span></td>
+                    <td>1</td>
+                    <td>Company One</td>
+                    <td>One@gmail.com</td>
+                    <td>+91 9876543210</td>
+                    <td>5/27 New Street, New York, USA</td>
+                    <td>12</td>                
+                    <td>
+                        <ion-icon name="create-outline"></ion-icon>
+                        <ion-icon name="trash-outline"></ion-icon>
+                    </td>            
                 </tr>
 
                 <tr>
-                    <td>Apple Watch</td>
-                    <td>$1200</td>
-                    <td>Paid</td>
-                    <td><span className="status return">Return</span></td>
-                </tr>
-
-                <tr>
-                    <td>Addidas Shoes</td>
-                    <td>$620</td>
-                    <td>Due</td>
-                    <td><span className="status inProgress">In Progress</span></td>
+                    <td>1</td>
+                    <td>Company One</td>
+                    <td>One@gmail.com</td>
+                    <td>+91 9876543210</td>
+                    <td>5/27 New Street, New York, USA</td>
+                    <td>12</td>      
+                    <td>
+                        <ion-icon name="create-outline"></ion-icon>
+                        <ion-icon name="trash-outline"></ion-icon>
+                    </td>                      
                 </tr>
             </tbody>
         </table>
